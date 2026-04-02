@@ -10,7 +10,7 @@
 
     <section id="hero">
         <div id="hero-content">
-            <h1 id="name">YOUR NAME</h1>
+            <h1 id="name">Maks Bertoncelj</h1>
             <button id="explore-btn">Explore</button>
         </div>
     </section>
@@ -18,31 +18,43 @@
     <main id="main-content" class="hidden">
         <section id="bio">
             <h2>Short Biography</h2>
-            <p>Write a few lines about your journey, your passion for tech, and what drives you. Keep it punchy and professional!</p>
+            <p>I am a computer science Master's student at the University of Ljubljana. I have a passion for software development and enjoy tackling complex problems with innovative solutions.
+                Here are some of the projects I've worked on besides my studies that I found fun and rewarding to build.
+
+            </p>
         </section>
 
         <section id="projects">
             <h2>My Projects</h2>
             <div class="project-grid">
                 <div class="project-card">
-                    <h3>Project One Name</h3>
+                    <h3>Automated wordle solver</h3>
                     <div class="project-details">
                         <img src="project1.jpg" alt="Project 1 Preview">
-                        <p>A brief description of what you built and the tools you used.</p>
+                        <p>An automated solver for the popular word game Wordle.
+                            I downloaded the list of all possible words and implemented a strategy to guess the correct word in as few attempts as possible. The solver scores letter based on their frequency in the list of possible words and uses the feedback from each guess to narrow down the possibilities. Logic is simple but it does the job done in an average of 4 attempts. I used github actions to schedule the solver to run daily and save the results. Later I made a quick summary of the results you can see in the picture. I also wanted to implement solver in prolog because of its pattern matching nature but never got around to it.
+                        </p>
                     </div>
                 </div>
 
                 <div class="project-card">
-                    <h3>Project Two Name</h3>
+                    <h3>Snake Game</h3>
                     <div class="project-details">
                         <img src="project2.jpg" alt="Project 2 Preview">
-                        <p>Highlight the problem you solved with this specific application.</p>
+                        <p>HI programed a simple game of snake in Java. I learned about the game loop, drawing screen and collision detection logic. I had a lot of fun designing how the game looks like. All tiles and snake parts are drawn by me.</p>
+                    </div>
+                </div>
+                <!-- Here porject number 3: -->
+                <div class="project-card">
+                    <h3>Database manager application</h3>
+                    <div class="project-details">
+                        <img src="project3.jpg" alt="Project 3 Preview">
+                        <p>A simplle database manager built in Java and Angular. I wanted to recreate a tool I used and add some of my own features. Witht his project the focus was in developing a REST Applicationm and stick to its principles. I designed a database schema and implemented the necessary CRUD operations. I learned about API calls conected them to font end design and ORMs. Then created a docker file so it can run in containers.</p>
                     </div>
                 </div>
             </div>
         </section>
     </main>
-
     <script src="script.js"></script>
 </body>
 </html>
