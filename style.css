@@ -16,9 +16,14 @@ body {
     transition: transform 0.8s ease-in-out, opacity 0.8s;
 }
 
+#hero-content {
+    text-align: center;
+}
+
 #hero-content h1 {
     font-size: 4rem;
     letter-spacing: 5px;
+    margin-bottom: 20px;
 }
 
 #explore-btn {
@@ -36,14 +41,14 @@ body {
     color: #1a1a1a;
 }
 
-/* The "Explosion" Effect */
+/* Explosion */
 .explode {
     transform: scale(5);
     opacity: 0;
     pointer-events: none;
 }
 
-/* Main Content */
+/* Main Content Visibility */
 .hidden {
     display: none;
 }
@@ -53,29 +58,60 @@ body {
     animation: fadeIn 1.5s ease-in;
 }
 
-/* Project Cards */
+/* Project Grid */
 .project-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
+    gap: 25px;
+    margin-top: 30px;
 }
 
+/* Updated Project Cards */
 .project-card {
     background: #2a2a2a;
     border-radius: 10px;
     padding: 20px;
-    overflow: hidden;
-    transition: all 0.5s ease;
-    height: 60px; /* Collapsed state */
-    cursor: pointer;
     border: 1px solid #444;
+    transition: all 0.5s ease;
+    
+    /* Collapsed State */
+    max-height: 40px; 
+    overflow: hidden; 
 }
 
 .project-card:hover {
-    height: 350px; /* Expanded state */
+    max-height: 450px; /* Adjust this to your liking */
+    overflow-y: auto;  /* Makes the card scrollable */
     border-color: #00d4ff;
 }
 
+/* Link and Title alignment */
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-header h3 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.github-link {
+    color: #00d4ff;
+    text-decoration: none;
+    font-size: 0.8rem;
+    border: 1px solid #00d4ff;
+    padding: 3px 8px;
+    border-radius: 4px;
+}
+
+.github-link:hover {
+    background: #00d4ff;
+    color: #1a1a1a;
+}
+
+/* Content inside card */
 .project-details {
     opacity: 0;
     transition: opacity 0.4s ease;
@@ -92,7 +128,17 @@ body {
     margin-bottom: 15px;
 }
 
+/* Animations */
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
+}
+
+/* Custom Scrollbar for cards */
+.project-card::-webkit-scrollbar {
+    width: 5px;
+}
+.project-card::-webkit-scrollbar-thumb {
+    background: #00d4ff;
+    border-radius: 10px;
 }
