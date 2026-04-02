@@ -1,0 +1,98 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #1a1a1a;
+    color: white;
+    overflow-x: hidden;
+}
+
+/* Hero Section */
+#hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.8s ease-in-out, opacity 0.8s;
+}
+
+#hero-content h1 {
+    font-size: 4rem;
+    letter-spacing: 5px;
+}
+
+#explore-btn {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    background: transparent;
+    color: #00d4ff;
+    border: 2px solid #00d4ff;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#explore-btn:hover {
+    background: #00d4ff;
+    color: #1a1a1a;
+}
+
+/* The "Explosion" Effect */
+.explode {
+    transform: scale(5);
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Main Content */
+.hidden {
+    display: none;
+}
+
+#main-content {
+    padding: 50px 10%;
+    animation: fadeIn 1.5s ease-in;
+}
+
+/* Project Cards */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.project-card {
+    background: #2a2a2a;
+    border-radius: 10px;
+    padding: 20px;
+    overflow: hidden;
+    transition: all 0.5s ease;
+    height: 60px; /* Collapsed state */
+    cursor: pointer;
+    border: 1px solid #444;
+}
+
+.project-card:hover {
+    height: 350px; /* Expanded state */
+    border-color: #00d4ff;
+}
+
+.project-details {
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    margin-top: 20px;
+}
+
+.project-card:hover .project-details {
+    opacity: 1;
+}
+
+.project-details img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
